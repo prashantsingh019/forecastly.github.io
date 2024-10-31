@@ -1,0 +1,129 @@
+body{
+    
+    background-blend-mode: difference;
+    background: linear-gradient(rgb(68, 23, 23), rgba(0, 0, 0, 0.716)),
+    url(/img/bg.jpg);
+}
+.city{
+    border-bottom: 1px solid black;
+}
+
+.inputBox:hover+.dropdown{
+    display: block;
+    background-color: aquamarine;
+}
+
+.option{
+    background-color: rgb(168, 164, 164);
+    padding: 5px 10px;
+}
+
+.option:hover{
+    background-color: rgb(222, 222, 222);
+}
+
+#getCity:focus +.option{
+    background-color: brown;
+}
+
+/* #recent-searches-list{
+    display: none;
+} */
+.option:active{
+    background-color: rgb(204, 39, 39);
+    cursor: pointer;
+}
+
+.card{
+    background-color: rgba(163, 159, 159, 0.46);
+}
+/* for I-Pad Mini */
+@media only screen and (max-width: 768px){
+    main{
+        flex-direction: column;
+        margin-top: -20px;
+    }
+    .screen{
+        width: 52%;
+        flex-direction: column;
+    }
+    .right-display{
+        display: block;
+    }
+    .clock{
+        width: 323px;
+        top: 102px;
+        position: absolute;
+        height: 216px;
+        right: 32px;
+         }
+     .searchBox{
+        width: 40vw;
+        position: absolute;
+        right: 47px;
+        top: 323px;
+     }
+     .container{
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        padding: 30px;
+        padding-top: 0;
+     }
+     .left-display{
+        width: 51vw;
+        /* background-color: black; */
+        padding: 13px;
+     }
+     .weather-icon img{
+        display: inline-block;
+     }
+     .left-display div{
+        padding: 5px;
+     }
+     
+}
+
+@media only screen and (max-width: 375px){
+  
+    .nav-list{
+        display: none;
+        background-color: gray;
+        position: absolute;
+        right: -500px;
+    }
+    main{
+        flex-direction: column;
+    }
+    .clock{
+        display: none;
+    }
+    .searchBox{
+        position: relative;
+        top: 5px;
+        left: 12px;
+        width: 83vw;
+        padding: 38px;
+    }
+    .screen{
+        width: 100%;
+        flex-direction: column;
+        padding: 0px;
+    }
+    .left-display{
+        width: 83vw;
+    }
+    .right-display{
+        font-weight: bolder;
+        padding: 5px;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .container{
+        grid-template-columns: 45% 45%;
+        padding: 10px;
+    }
+    .card .temp{
+        font-size: 26px;
+    }
+}
+   

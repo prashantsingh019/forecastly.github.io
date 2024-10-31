@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherApp</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="normalCss.css" />
+  </head>
+  <body class="text-white bg-black overflow-scroll">
+    <!-- header start -->
+    <header class="mb-1">
+      <!-- navigation bar -->
+      <nav
+        class="flex items-center justify-between p-6 border-2 border-white rounded-lg shadow-sm"
+      >
+        <!-- logo with name-->
+        <div class="logo text-3xl flex items-center font-bold">
+          WeatherApp<img src="/img/cloudy.png" alt="logo" class="h-10" />
+        </div>
+        <!-- nav links for navigation -->
+        <ul class="nav-list list-none flex text-xl gap-4 items-center">
+          <li class="hover:underline">Home</li>
+          <li class="hover:underline">How to use?</li>
+          <li class="hover:underline">Feedback</li>
+          <li>
+            <!-- button for sign up / login -->
+            <button class="bg-sky-500 p-2 rounded-lg hover:bg-sky-400">
+              <a href="https://github.com/prashantsingh019/WeatherApp">GitHub Source code</a>
+             
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- header End -->
+    <main class="flex p-5 gap-x-5 justify-center overflow-x-hidden">
+      <div
+        class="display flex border-2 border-white px-2 items-center rounded-md w-1/2 justify-between py-2 shadow-2xl screen"
+      >
+        <div class="left-display flex flex-col gap-y-2">
+          <div class="cityName text-4xl font-bold"></div>
+          <span class="temp text-5xl text-blue-900"></span>
+          <div class="weather-icon text-3xl"></div>
+          <div class="weather-condition"></div>
+        </div>
+        <div class="right-display flex flex-col text-2xl gap-y-2">
+          <div class="weatherItem flex justify-between">
+            <div class="unit">
+              Pressure&nbsp;<i class="fa-solid fa-gauge-simple"></i>
+            </div>
+            <div class="value1 mx-2"></div>
+          </div>
+          <div class="weatherItem flex justify-between">
+            <div class="unit">
+              Humidity&nbsp;<i class="fa-solid fa-droplet"></i>
+            </div>
+            <div class="value2 mx-2">94%</div>
+          </div>
+          <div class="weatherItem flex justify-between">
+            <div class="unit">
+              WindSpeed&nbsp;<i class="fa-solid fa-wind"></i>
+            </div>
+            <div class="value3 mx-2"></div>
+          </div>
+          <div class="weatherItem flex justify-between">
+            <div class="unit">Feels like</div>
+            <div class="value4 mx-2"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- clock code -->
+      <div
+        class="clock border-2 border-white flex justify-center flex-col rounded-md text-4xl p-5"
+      >
+        <div class="day"></div>
+        <div class="date"></div>
+        <div class="time font-semibold"></div>
+        <div class="time-zone"></div>
+      </div>
+
+      <!-- search bar and location btn-->
+      <div
+        class="searchBox flex flex-col gap-y-2 border-2 border-white px-4 py-10 rounded-md text-lg shadow-2xl"
+      >
+        <div class="inputBox flex flex-col">
+          <input
+            type="text"
+            id="getCity"
+            placeholder="for eg:New york"
+            class="rounded-sm px-2 py-1 outline-none text-blue-900"
+          />
+          <div id="dropdown">
+         <ul
+            class="absolute bg-gray-400 rounded-sm dropdown m-0 p-0 flex flex-col "
+            id="recent-searches-list"
+          >
+          
+        </ul>
+         </div>
+        </div>
+        <button
+          class="bg-sky-500 p-1 rounded-lg hover:bg-sky-400 btn-get btn-act"
+        >
+          Get Data
+        </button>
+        <hr />
+        <button
+          class="currentLocation bg-green-400 rounded-md py-1 hover:bg-green-300 btn-locate btn-act"
+        >
+          Current Location
+        </button>
+      </div>
+    </main>
+    <!--main end-->
+    <section
+      class="container flex p-2 gap-4 mx-auto overflow-x-scroll"
+    ></section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
